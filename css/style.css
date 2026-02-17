@@ -1,0 +1,596 @@
+/*===========================================================================*/
+/* RESET AND BASE STYLES - COMPACT VERSION */
+/*===========================================================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f0f0f0;
+    line-height: 1.2; /* Reduced line spacing */
+    color: #000000;
+    font-size: 11pt; /* Base font size reduced */
+}
+
+.document-container {
+    max-width: 210mm;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/*===========================================================================*/
+/* PAGE SETUP - COMPACT MARGINS */
+/*===========================================================================*/
+
+.page, .cover-page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 2cm 2cm; /* Reduced margins */
+    position: relative;
+    background-color: white;
+    page-break-after: always;
+    margin: 0 auto;
+}
+
+/*===========================================================================*/
+/* COVER PAGE - COMPACT */
+/*===========================================================================*/
+
+.cover-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.university-header {
+    text-align: center;
+    margin-bottom: 2cm;
+    padding-bottom: 0.3cm;
+    border-bottom: 1.5px solid #000000;
+}
+
+.university-header h1 {
+    font-size: 24pt; /* Reduced from 32pt */
+    color: #000000;
+    margin-bottom: 0.3cm;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.university-header h2 {
+    font-size: 22pt; /* Reduced */
+    color: #000000;
+    margin-bottom: 0.3cm;
+    font-weight: 600;
+}
+
+.university-header h3 {
+    font-size: 20pt; /* Reduced */
+    color: #000000;
+    margin-bottom: 0.3cm;
+}
+
+.university-header h4 {
+    font-size: 18pt; /* Reduced */
+    color: #000000;
+    font-weight: normal;
+}
+
+.cover-content {
+    width: 100%;
+    max-width: 14cm;
+    margin: 0 auto;
+}
+
+.info-box, .group-box, .instructions-box {
+    background-color: white;
+    padding: 0.3cm 0;
+    margin-bottom: 0.5cm;
+}
+
+.info-box h3, .group-box h3, .instructions-box h3 {
+    color: #000000;
+    margin-bottom: 0.2cm;
+    font-size: 16pt; /* Reduced */
+    font-weight: bold;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0.1cm;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table td {
+    padding: 0.1cm 0.1cm;
+    font-size: 11pt; /* Reduced */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.members-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt; /* Reduced */
+}
+
+.members-table th {
+    background-color: #f2f2f2;
+    color: #000000;
+    padding: 0.2cm;
+    font-weight: bold;
+    border-bottom: 1.5px solid #000000;
+}
+
+.members-table td {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.2cm;
+}
+
+.instructions-box ul {
+    padding-left: 0.6cm;
+    font-size: 11pt;
+}
+
+.instructions-box li {
+    margin: 0.1cm 0;
+}
+
+/*===========================================================================*/
+/* PAGE HEADERS - COMPACT */
+/*===========================================================================*/
+
+.page-header {
+    border-bottom: 1.5px solid #000000;
+    margin-bottom: 0.5cm;
+    padding-bottom: 0.2cm;
+}
+
+.page-header h2 {
+    font-size: 20pt; /* Reduced */
+    color: #000000;
+    font-weight: bold;
+}
+
+/*===========================================================================*/
+/* QUESTION PARTS - COMPACT */
+/*===========================================================================*/
+
+.question-part {
+    margin-bottom: 0.8cm;
+}
+
+.question-part h3 {
+    font-size: 16pt; /* Reduced */
+    color: #000000;
+    margin: 0.3cm 0 0.2cm;
+    font-weight: bold;
+}
+
+.question-part h4 {
+    font-size: 14pt; /* Reduced */
+    color: #000000;
+    margin: 0.2cm 0 0.15cm;
+    font-style: italic;
+}
+
+/*===========================================================================*/
+/* TEXT CONTENT - COMPACT SPACING */
+/*===========================================================================*/
+
+p {
+    margin: 0.15cm 0;
+    text-align: justify;
+    font-size: 11pt; /* Reduced */
+    line-height: 1.3; /* Reduced line height */
+}
+
+/* Compact class for reduced spacing */
+.compact p {
+    margin: 0.1cm 0;
+    line-height: 1.2;
+}
+
+.definition-box {
+    background-color: white;
+    padding: 0.2cm 0.4cm;
+    margin: 0.3cm 0;
+    font-size: 11pt;
+    border-left: 2px solid #ffffff;
+}
+
+.definition-box.compact {
+    padding: 0.15cm 0.3cm;
+    margin: 0.2cm 0;
+}
+
+.solution-box {
+    background-color: white;
+    padding: 0.3cm 0;
+    margin: 0.3cm 0;
+}
+
+.solution-box.compact {
+    padding: 0.2cm 0;
+    margin: 0.2cm 0;
+}
+
+.summary-box {
+    background-color: white;
+    padding: 0.3cm 0;
+    margin: 0.4cm 0;
+    font-size: 11pt;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.proof-box {
+    background-color: white;
+    padding: 0.2cm 0.4cm;
+    margin: 0.3cm 0;
+    font-size: 11pt;
+    border-left: 2px solid #000000;
+}
+
+/*===========================================================================*/
+/* MATHEMATICAL EQUATIONS - NO SCROLL BARS, WRAPPED TEXT */
+/*===========================================================================*/
+
+.math-block {
+    margin: 0.2cm auto;
+    padding: 0.1cm 0.2cm;
+    background-color: white;
+    font-size: 11pt; /* Reduced */
+    font-family: 'Times New Roman', Times, serif;
+    color: #000080; /* Navy blue */
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible; /* NO SCROLL BARS */
+    white-space: normal; /* Allow wrapping */
+    word-wrap: break-word; /* Break long words */
+    word-break: break-word;
+    display: block;
+    line-height: 1.3;
+}
+
+/* Compact math block - even tighter */
+.math-block.compact {
+    margin: 0.1cm auto;
+    padding: 0.05cm 0.1cm;
+    font-size: 10.5pt;
+    line-height: 1.2;
+}
+
+/* For multi-line equations - wrap properly */
+.math-block.multiline {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Highlighted answers */
+.math-block.highlight {
+    color: #006400; /* Dark green */
+    font-weight: bold;
+}
+
+.answer {
+    color: #006400;
+    font-weight: bold;
+    font-size: 11pt;
+    text-align: center;
+    margin: 0.2cm auto;
+    line-height: 1.3;
+}
+
+/* For inline formulas */
+.inline-formula {
+    color: #000080;
+    font-size: 11pt;
+    white-space: nowrap; /* Keep inline formulas from breaking */
+}
+
+/*===========================================================================*/
+/* IMAGE SIZING - REDUCED HEIGHT */
+/*===========================================================================*/
+
+.diagram-container, .graph-section {
+    margin: 0.5cm auto;
+    text-align: center;
+    page-break-inside: avoid;
+}
+
+/* All images - reduced height */
+.diagram-image, 
+.graph-image, 
+.plot-image,
+.compound-angle-diagram,
+.triangle-diagram,
+.parabola-diagram,
+.ellipse-diagram,
+.hyperbola-diagram {
+    max-width: 100%;
+    height: 14cm; /* Reduced from 14cm */
+    width: auto;
+    display: block;
+    margin: 10px auto;
+    object-fit: contain;
+    border: none;
+}
+
+/* Specific adjustments */
+.compound-angle-diagram {
+    height: 10cm;
+    max-width: 80%;
+}
+
+.triangle-diagram {
+    height: 9cm;
+    max-width: 75%;
+}
+
+.parabola-diagram {
+    height: 10cm;
+    max-width: 85%;
+}
+
+.graph-image {
+    height: 8cm; /* Smaller for multiple graphs */
+    max-width: 90%;
+}
+
+.graph-container .graph-image {
+    height: 7cm;
+}
+
+/* Image captions - compact */
+.diagram-caption {
+    font-style: italic;
+    color: #555555;
+    margin-top: 0.2cm;
+    font-size: 10pt;
+    text-align: center;
+}
+
+/*===========================================================================*/
+/* GRAPH DATA TABLES - COMPACT */
+/*===========================================================================*/
+
+.graph-data {
+    width: 70%;
+    margin: 0.3cm auto;
+    border-collapse: collapse;
+    font-size: 10pt;
+}
+
+.graph-data th {
+    background-color: #f2f2f2;
+    padding: 0.15cm;
+    border-bottom: 1.5px solid #000000;
+}
+
+.graph-data td {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.15cm;
+}
+
+/*===========================================================================*/
+/* TABLES - COMPACT */
+/*===========================================================================*/
+
+.formula-table, .result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.4cm 0;
+    font-size: 11pt;
+}
+
+.formula-table th, .result-table th {
+    background-color: #f2f2f2;
+    padding: 0.2cm;
+    font-weight: bold;
+    border-bottom: 1.5px solid #000000;
+}
+
+.formula-table td, .result-table td {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.2cm;
+    vertical-align: top;
+}
+
+.formula-table td:first-child {
+    width: 40%;
+}
+
+.formula-table td:last-child {
+    width: 60%;
+    color: #000080;
+}
+
+/*===========================================================================*/
+/* PAGE NUMBERS - EXACT POSITIONING */
+/*===========================================================================*/
+
+.page-number {
+    position: absolute;
+    bottom: 1.5cm;
+    right: 2cm;
+    font-size: 10pt;
+    color: #555555;
+    font-style: italic;
+    z-index: 100;
+    background-color: white;
+    padding: 0.05cm 0.1cm;
+}
+
+/* Even pages - left alignment */
+.page:nth-child(even) .page-number {
+    right: auto;
+    left: 2cm;
+    text-align: left;
+}
+
+/*===========================================================================*/
+/* EQUATION NUMBERS - COMPACT */
+/*===========================================================================*/
+
+.eq-number {
+    float: right;
+    color: #777777;
+    font-size: 9pt;
+    margin-left: 0.3cm;
+    font-style: italic;
+    vertical-align: middle;
+}
+
+/*===========================================================================*/
+/* LISTS - COMPACT */
+/*===========================================================================*/
+
+ul, ol {
+    margin: 0.2cm 0 0.2cm 0.6cm;
+    font-size: 11pt;
+}
+
+li {
+    margin: 0.05cm 0;
+    line-height: 1.3;
+}
+
+/*===========================================================================*/
+/* PRINT STYLES */
+/*===========================================================================*/
+
+@page {
+    size: A4;
+    margin: 2cm;
+    
+    @top-center { content: "" !important; display: none !important; }
+    @bottom-center { content: "" !important; display: none !important; }
+    @top-left { content: "" !important; display: none !important; }
+    @top-right { content: "" !important; display: none !important; }
+    @bottom-left { content: "" !important; display: none !important; }
+    @bottom-right { content: "" !important; display: none !important; }
+    
+    margin-header: 0cm;
+    margin-footer: 0cm;
+    marks: none;
+}
+
+@media print {
+    body { background-color: white; }
+    
+    .page, .cover-page {
+        page-break-after: always;
+        padding: 2cm;
+        margin: 0;
+    }
+    
+    /* Remove URL from links */
+    a[href]:after { content: "" !important; display: none !important; }
+    
+    /* Preserve colors */
+    .math-block {
+        color: #000080 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .math-block.highlight {
+        color: #006400 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    /* Ensure page numbers print */
+    .page-number {
+        display: block !important;
+        position: absolute;
+        bottom: 1.5cm;
+        right: 2cm;
+    }
+}
+
+/*===========================================================================*/
+/* RESPONSIVE DESIGN */
+/*===========================================================================*/
+
+@media (max-width: 768px) {
+    .page, .cover-page {
+        padding: 1cm;
+        width: 100%;
+    }
+    
+    .university-header h1 { font-size: 20pt; }
+    .university-header h2 { font-size: 18pt; }
+    .university-header h3 { font-size: 16pt; }
+    .university-header h4 { font-size: 14pt; }
+    .page-header h2 { font-size: 18pt; }
+    .question-part h3 { font-size: 14pt; }
+    .question-part h4 { font-size: 13pt; }
+    
+    p, .definition-box, .solution-box { font-size: 10pt; }
+    
+    .math-block {
+        font-size: 10pt;
+        overflow: visible;
+        white-space: normal;
+    }
+    
+    /* Adjust image sizes */
+    .diagram-image, .graph-image {
+        height: auto;
+        max-height: 6cm;
+        width: 100%;
+    }
+    
+    .page-number {
+        bottom: 0.8cm;
+        right: 1cm;
+        font-size: 9pt;
+    }
+}
+
+/*===========================================================================*/
+/* FONT SIZE REDUCTION CLASSES */
+/*===========================================================================*/
+
+/* Extra compact for tight spaces */
+.compact-all {
+    font-size: 10pt;
+    line-height: 1.2;
+}
+
+.compact-all p {
+    font-size: 10pt;
+    margin: 0.1cm 0;
+}
+
+.compact-all .math-block {
+    font-size: 10pt;
+    margin: 0.1cm 0;
+}
+
+/* For long equations that need wrapping */
+.wrap-equation {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow: visible !important;
+}
+
+/* Ensure no horizontal scroll anywhere */
+body, html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.document-container, .page, .cover-page {
+    overflow-x: hidden;
+    max-width: 100%;
+}

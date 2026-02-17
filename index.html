@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS 6222: Coordinate Geometry - Group Assignment Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="document-container">
+        <!-- COVER PAGE -->
+
+        <!-- PAGE 2: QUESTION 1a -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 01</h2>
+            </div>
+            
+            <div class="question-part">
+                <h3>a. Derivation of Compound Angle Formula</h3>
+                
+                <div class="definition-box">
+                    <p><strong>Definition:</strong> A compound angle is an angle formed by combining two simpler angles that are measured on different planes.</p>
+                </div>
+
+                <div class="diagram-container">
+                    <h4>Consider the figure below:</h4>
+                    <img src="images/one.jpg" alt="Compound Angle Diagram" class="diagram-image compound-angle-diagram">
+                    <p class="diagram-caption">Figure 1.1: Geometric construction for compound angle derivation</p>
+                </div>
+
+                <div class="solution-box">
+                    <p>In the diagram, the triangles PQR, PRS, and PQT are all right-angled.</p>
+                    <p>∠PRX = A, ∠XRQ = 90° - A, ∠XQR = A</p>
+
+                    <h4>Compound Angle for Sine</h4>
+                    <div class="derivation">
+                        <p>Consider,</p>
+                        <div class="math-block">
+                            $$\sin(A + B) = \frac{QT}{PQ}$$
+                        </div>
+                        <p>But, QT = QX + TX</p>
+                        <div class="math-block">
+                            $$\sin(A + B) = \frac{TX + QX}{PQ}$$
+                        </div>
+                        <div class="math-block">
+                            $$\sin(A + B) = \frac{TX}{PQ} + \frac{QX}{PQ} = \frac{RS}{PQ} + \frac{QX}{PQ}$$
+                        </div>
+                        <p>Since TX = RS</p>
+                        <div class="math-block">
+                            $$\sin(A + B) = \frac{RS}{PQ} \times \frac{PR}{PR} + \frac{QX}{PQ} \times \frac{QR}{QR}$$
+                        </div>
+                        <div class="math-block">
+                            $$\sin(A + B) = \frac{RS}{PR} \times \frac{PR}{PQ} + \frac{QX}{QR} \times \frac{QR}{PQ}$$
+                        </div>
+                        <p>Using Trigonometry,</p>
+                        <div class="math-block">
+                            $$\frac{RS}{PR} = \sin A, \quad \frac{PR}{PQ} = \cos B, \quad \frac{QX}{QR} = \cos A, \quad \frac{QR}{PQ} = \sin B$$
+                        </div>
+                        <div class="math-block">
+                            $$\therefore \sin(A + B) = \sin A \cos B + \cos A \sin B$$
+                        </div>
+                        <div class="math-block">
+                            $$\therefore \sin(A - B) = \sin A \cos B - \cos A \sin B$$
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 3: QUESTION 1a CONTINUED -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 01 Cont...</h2>
+            </div>
+            
+            <div class="question-part">
+                <h4>Compound Angle for Cosine</h4>
+                <div class="solution-box">
+                    <p>Using the similar method as above,</p>
+                    <div class="math-block">
+                        $$\cos(A + B) = \frac{PT}{PQ}$$
+                    </div>
+                    <p>But, PT = PS - ST</p>
+                    <div class="math-block">
+                        $$\cos(A + B) = \frac{PS - ST}{PQ} = \frac{PS}{PQ} - \frac{ST}{PQ} = \frac{PS}{PQ} - \frac{RX}{PQ}$$
+                    </div>
+                    <div class="math-block">
+                        $$\cos(A + B) = \frac{PS}{PQ} \times \frac{PR}{PR} - \frac{RX}{PQ} \times \frac{QR}{QR}$$
+                    </div>
+                    <div class="math-block">
+                        $$\cos(A + B) = \frac{PS}{PR} \times \frac{PR}{PQ} - \frac{RX}{QR} \times \frac{QR}{PQ}$$
+                    </div>
+                    <p>Using trigonometry,</p>
+                    <div class="math-block">
+                        $$\frac{PS}{PR} = \cos A, \quad \frac{PR}{PQ} = \cos B, \quad \frac{RX}{QR} = \sin A, \quad \frac{QR}{PQ} = \sin B$$
+                    </div>
+                    <div class="math-block">
+                        $$\therefore \cos(A + B) = \cos A \cos B - \sin A \sin B$$
+                    </div>
+                    <div class="math-block">
+                        $$\therefore \cos(A - B) = \cos A \cos B + \sin A \sin B$$
+                    </div>
+
+                    <h4>Compound Angle for Tangent</h4>
+                    <p>Since,</p>
+                    <div class="math-block">
+                        $$\tan \theta = \frac{\sin \theta}{\cos \theta}$$
+                    </div>
+                    <div class="math-block">
+                        $$\tan(A + B) = \frac{\sin(A + B)}{\cos(A + B)} = \frac{\sin A \cos B + \cos A \sin B}{\cos A \cos B - \sin A \sin B}$$
+                    </div>
+                    <p>Divide by \(\cos A \cos B\) in both numerator and denominator:</p>
+                    <div class="math-block">
+                        $$\tan(A + B) = \frac{\frac{\sin A \cos B}{\cos A \cos B} + \frac{\cos A \sin B}{\cos A \cos B}}{\frac{\cos A \cos B}{\cos A \cos B} - \frac{\sin A \sin B}{\cos A \cos B}}$$
+                    </div>
+                    <div class="math-block">
+                        $$\therefore \tan(A + B) = \frac{\tan A + \tan B}{1 - \tan A \tan B}$$
+                    </div>
+                    <div class="math-block">
+                        $$\therefore \tan(A - B) = \frac{\tan A - \tan B}{1 + \tan A \tan B}$$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 4: QUESTION 1b -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 01 Cont...</h2>
+            </div>
+            
+            <div class="question-part">
+                <h3>b. Derivation of Half-Angle Formulas</h3>
+                
+                <div class="solution-box">
+                    <h4>Half-Angle Formula for Sine</h4>
+                    <p>Starting from the double-angle formula:</p>
+                    <div class="math-block">
+                        $$\cos 2\theta = 1 - 2\sin^2 \theta$$
+                    </div>
+                    <p>Rearranging:</p>
+                    <div class="math-block">
+                        $$2\sin^2 \theta = 1 - \cos 2\theta$$
+                    </div>
+                    <div class="math-block">
+                        $$\sin^2 \theta = \frac{1 - \cos 2\theta}{2}$$
+                    </div>
+                    <p>Let \(\theta = \frac{A}{2}\), then \(2\theta = A\):</p>
+                    <div class="math-block">
+                        $$\sin^2 \frac{A}{2} = \frac{1 - \cos A}{2}$$
+                    </div>
+                    <div class="math-block">
+                        $$\therefore \sin \frac{A}{2} = \pm \sqrt{\frac{1 - \cos A}{2}}$$
+                    </div>
+
+                    <h4>Half-Angle Formula for Cosine</h4>
+                    <p>From the double-angle formula:</p>
+                    <div class="math-block">
+                        $$\cos 2\theta = 2\cos^2 \theta - 1$$
+                    </div>
+                    <p>Rearranging:</p>
+                    <div class="math-block">
+                        $$2\cos^2 \theta = 1 + \cos 2\theta$$
+                    </div>
+                    <div class="math-block">
+                        $$\cos^2 \theta = \frac{1 + \cos 2\theta}{2}$$
+                    </div>
+                    <p>Let \(\theta = \frac{A}{2}\):</p>
+                    <div class="math-block">
+                        $$\cos^2 \frac{A}{2} = \frac{1 + \cos A}{2}$$
+                    </div>
+                    <div class="math-block">
+                        $$\therefore \cos \frac{A}{2} = \pm \sqrt{\frac{1 + \cos A}{2}}$$
+                    </div>
+                </div>
+                
+                <div class="diagram-container">
+                    <img src="https://i.imgur.com/KpQZcYm.png" alt="Half-Angle Diagram" class="diagram-image">
+                    <p class="diagram-caption">Figure 1.2: Geometric interpretation of half-angles</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 5: QUESTION 1b CONTINUED & 1c -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 01 Cont...</h2>
+            </div>
+            
+            <div class="question-part">
+                <h4>Half-Angle Formula for Tangent</h4>
+                <div class="solution-box">
+                    <p>Using the quotient identity:</p>
+                    <div class="math-block">
+                        $$\tan \frac{A}{2} = \frac{\sin \frac{A}{2}}{\cos \frac{A}{2}}$$
+                    </div>
+                    <div class="math-block">
+                        $$\tan \frac{A}{2} = \frac{\pm \sqrt{\frac{1 - \cos A}{2}}}{\pm \sqrt{\frac{1 + \cos A}{2}}} = \pm \sqrt{\frac{1 - \cos A}{1 + \cos A}}$$
+                    </div>
+                    <p>Alternative form:</p>
+                    <div class="math-block">
+                        $$\tan \frac{A}{2} = \frac{1 - \cos A}{\sin A} = \frac{\sin A}{1 + \cos A}$$
+                    </div>
+                </div>
+
+                <h3>c. Derivation of Sine and Cosine Rules</h3>
+                
+                <div class="diagram-container">
+                    <h4>Triangle for Sine Rule:</h4>
+                    <img src="https://i.imgur.com/LmKpQ8R.png" alt="Triangle for Sine Rule" class="diagram-image">
+                    <p class="diagram-caption">Figure 1.3: Triangle ABC with altitude from C</p>
+                </div>
+
+                <div class="solution-box">
+                    <h4>Sine Rule:</h4>
+                    <p>In triangle ABC, drop altitude h from C to AB.</p>
+                    <div class="math-block">
+                        $$\sin A = \frac{h}{b}, \quad \sin B = \frac{h}{a}$$
+                    </div>
+                    <div class="math-block">
+                        $$\Rightarrow h = b \sin A = a \sin B$$
+                    </div>
+                    <div class="math-block">
+                        $$\therefore \frac{a}{\sin A} = \frac{b}{\sin B}$$
+                    </div>
+                    <p>Similarly, by dropping altitude from B to AC:</p>
+                    <div class="math-block">
+                        $$\frac{a}{\sin A} = \frac{c}{\sin C}$$
+                    </div>
+                    <div class="math-block">
+                        $$\therefore \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 6: QUESTION 1c CONTINUED -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 01 Cont...</h2>
+            </div>
+            
+            <div class="question-part">
+                <div class="solution-box">
+                    <h4>Cosine Rule:</h4>
+                    <p>Using the same triangle, by the Pythagorean theorem:</p>
+                    <div class="math-block">
+                        $$a^2 = (c - x)^2 + h^2$$
+                    </div>
+                    <p>But \(h^2 = b^2 - x^2\) and \(x = b \cos A\):</p>
+                    <div class="math-block">
+                        $$a^2 = (c - b \cos A)^2 + (b^2 - b^2 \cos^2 A)$$
+                    </div>
+                    <div class="math-block">
+                        $$a^2 = c^2 - 2bc \cos A + b^2 \cos^2 A + b^2 - b^2 \cos^2 A$$
+                    </div>
+                    <div class="math-block">
+                        $$\therefore a^2 = b^2 + c^2 - 2bc \cos A$$
+                    </div>
+                    <p>Similarly,</p>
+                    <div class="math-block">
+                        $$b^2 = a^2 + c^2 - 2ac \cos B$$
+                    </div>
+                    <div class="math-block">
+                        $$c^2 = a^2 + b^2 - 2ab \cos C$$
+                    </div>
+                </div>
+
+                <div class="summary-box">
+                    <h4>Summary of Results:</h4>
+                    <table class="formula-table">
+                        <tr>
+                            <th>Formula Type</th>
+                            <th>Equation</th>
+                        </tr>
+                        <tr>
+                            <td>Sine Rule</td>
+                            <td>\(\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}\)</td>
+                        </tr>
+                        <tr>
+                            <td>Cosine Rule</td>
+                            <td>\(a^2 = b^2 + c^2 - 2bc \cos A\)</td>
+                        </tr>
+                        <tr>
+                            <td>Compound Angle (Sine)</td>
+                            <td>\(\sin(A \pm B) = \sin A \cos B \pm \cos A \sin B\)</td>
+                        </tr>
+                        <tr>
+                            <td>Compound Angle (Cosine)</td>
+                            <td>\(\cos(A \pm B) = \cos A \cos B \mp \sin A \sin B\)</td>
+                        </tr>
+                        <tr>
+                            <td>Compound Angle (Tangent)</td>
+                            <td>\(\tan(A \pm B) = \frac{\tan A \pm \tan B}{1 \mp \tan A \tan B}\)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 7: QUESTION 2 -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 02</h2>
+            </div>
+            
+            <div class="question-part">
+                <h3>Graphs of Trigonometric Functions</h3>
+                
+                <div class="graph-section">
+                    <h4>a. \(y = \sin 2x\)</h4>
+                    <div class="graph-container">
+                        <img src="https://i.imgur.com/VYpQx8K.png" alt="Graph of sin 2x" class="graph-image">
+                        <table class="graph-data">
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr><td>Amplitude</td><td>1</td></tr>
+                            <tr><td>Period</td><td>\(\pi\)</td></tr>
+                            <tr><td>Phase Shift</td><td>0</td></tr>
+                            <tr><td>Range</td><td>[-1, 1]</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="graph-section">
+                    <h4>b. \(y = \cos^2 x\)</h4>
+                    <div class="graph-container">
+                        <img src="https://i.imgur.com/ZKxqQ0p.png" alt="Graph of cos^2 x" class="graph-image">
+                        <table class="graph-data">
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr><td>Using identity</td><td>\(\cos^2 x = \frac{1 + \cos 2x}{2}\)</td></tr>
+                            <tr><td>Amplitude</td><td>\(\frac{1}{2}\)</td></tr>
+                            <tr><td>Period</td><td>\(\pi\)</td></tr>
+                            <tr><td>Range</td><td>[0, 1]</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 8: QUESTION 2 CONTINUED -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 02 Cont...</h2>
+            </div>
+            
+            <div class="question-part">
+                <div class="graph-section">
+                    <h4>c. \(y = \cot x\)</h4>
+                    <div class="graph-container">
+                        <img src="https://i.imgur.com/Y8LZ7tK.png" alt="Graph of cot x" class="graph-image">
+                        <table class="graph-data">
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr><td>Definition</td><td>\(\cot x = \frac{\cos x}{\sin x}\)</td></tr>
+                            <tr><td>Period</td><td>\(\pi\)</td></tr>
+                            <tr><td>Asymptotes</td><td>\(x = n\pi, n \in \mathbb{Z}\)</td></tr>
+                            <tr><td>Zeros</td><td>\(x = \frac{(2n+1)\pi}{2}\)</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="graph-section">
+                    <h4>d. \(y = \sin^{-1} x\)</h4>
+                    <div class="graph-container">
+                        <img src="https://i.imgur.com/L9WQp8J.png" alt="Graph of arcsin x" class="graph-image">
+                        <table class="graph-data">
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr><td>Domain</td><td>[-1, 1]</td></tr>
+                            <tr><td>Range</td><td>\([-\frac{\pi}{2}, \frac{\pi}{2}]\)</td></tr>
+                            <tr><td>Symmetry</td><td>Odd function</td></tr>
+                            <tr><td>Key points</td><td>\((-1, -\frac{\pi}{2}), (0,0), (1, \frac{\pi}{2})\)</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 9: QUESTION 3 -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 03</h2>
+            </div>
+            
+            <div class="question-part">
+                <h3>Parabola: \(y^2 = 16x\)</h3>
+                
+                <div class="solution-box">
+                    <p><strong>Given:</strong> \(y^2 = 16x\)</p>
+                    <p>Comparing with standard form \(y^2 = 4ax\):</p>
+                    <div class="math-block">
+                        $$4a = 16 \implies a = 4$$
+                    </div>
+
+                    <h4>Verification of points:</h4>
+                    <p>Point P(16,16): \(16^2 = 256\), \(16 \times 16 = 256\) ✓</p>
+                    <p>Point Q(1,-4): \((-4)^2 = 16\), \(16 \times 1 = 16\) ✓</p>
+
+                    <h4>Equation of tangent at (x₁, y₁):</h4>
+                    <div class="math-block">
+                        $$yy_1 = 2a(x + x_1)$$
+                    </div>
+                </div>
+
+                <div class="diagram-container">
+                    <img src="https://i.imgur.com/RTnYw2L.png" alt="Parabola with tangents" class="diagram-image parabola-diagram">
+                    <p class="diagram-caption">Figure 3.1: Parabola \(y^2 = 16x\) showing tangents and normals</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 10: QUESTION 3 CONTINUED -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 03 Cont...</h2>
+            </div>
+            
+            <div class="question-part">
+                <div class="solution-box">
+                    <h4>Tangent at P(16,16):</h4>
+                    <div class="math-block">
+                        $$16y = 8(x + 16)$$
+                    </div>
+                    <div class="math-block">
+                        $$16y = 8x + 128$$
+                    </div>
+                    <div class="math-block">
+                        $$y = \frac{x}{2} + 8 \quad \text{(Equation T₁)}$$
+                    </div>
+                    <p>Slope m₁ = \(\frac{1}{2}\)</p>
+
+                    <h4>Tangent at Q(1,-4):</h4>
+                    <div class="math-block">
+                        $$(-4)y = 8(x + 1)$$
+                    </div>
+                    <div class="math-block">
+                        $$-4y = 8x + 8$$
+                    </div>
+                    <div class="math-block">
+                        $$y = -2x - 2 \quad \text{(Equation T₂)}$$
+                    </div>
+                    <p>Slope m₂ = \(-2\)</p>
+
+                    <h4>Intersection Point T of Tangents:</h4>
+                    <p>Equating T₁ and T₂:</p>
+                    <div class="math-block">
+                        $$\frac{x}{2} + 8 = -2x - 2$$
+                    </div>
+                    <div class="math-block">
+                        $$\frac{x}{2} + 2x = -10$$
+                    </div>
+                    <div class="math-block">
+                        $$\frac{5x}{2} = -10 \implies x = -4$$
+                    </div>
+                    <div class="math-block">
+                        $$y = -2(-4) - 2 = 6$$
+                    </div>
+                    <p>Therefore, T = (-4, 6)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 11: QUESTION 3 CONTINUED -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 03 Cont...</h2>
+            </div>
+            
+            <div class="question-part">
+                <div class="solution-box">
+                    <h4>Equations of Normals:</h4>
+                    <p>For a parabola, slope of normal = \(-\frac{1}{\text{slope of tangent}}\)</p>
+
+                    <h4>Normal at P(16,16):</h4>
+                    <div class="math-block">
+                        $$m_n = -\frac{1}{m_1} = -2$$
+                    </div>
+                    <div class="math-block">
+                        $$y - 16 = -2(x - 16)$$
+                    </div>
+                    <div class="math-block">
+                        $$y - 16 = -2x + 32$$
+                    </div>
+                    <div class="math-block">
+                        $$y = -2x + 48 \quad \text{(Equation N₁)}$$
+                    </div>
+
+                    <h4>Normal at Q(1,-4):</h4>
+                    <div class="math-block">
+                        $$m_n = -\frac{1}{m_2} = \frac{1}{2}$$
+                    </div>
+                    <div class="math-block">
+                        $$y + 4 = \frac{1}{2}(x - 1)$$
+                    </div>
+                    <div class="math-block">
+                        $$y + 4 = \frac{x}{2} - \frac{1}{2}$$
+                    </div>
+                    <div class="math-block">
+                        $$y = \frac{x}{2} - \frac{9}{2} \quad \text{(Equation N₂)}$$
+                    </div>
+                </div>
+
+                <div class="diagram-container">
+                    <img src="https://i.imgur.com/wL9XpQM.png" alt="Intersection of normals" class="diagram-image">
+                    <p class="diagram-caption">Figure 3.2: Intersection point R of normals</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 12: QUESTION 3 CONTINUED -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 03 Cont...</h2>
+            </div>
+            
+            <div class="question-part">
+                <div class="solution-box">
+                    <h4>Intersection Point R of Normals:</h4>
+                    <p>Equating N₁ and N₂:</p>
+                    <div class="math-block">
+                        $$-2x + 48 = \frac{x}{2} - \frac{9}{2}$$
+                    </div>
+                    <p>Multiply both sides by 2:</p>
+                    <div class="math-block">
+                        $$-4x + 96 = x - 9$$
+                    </div>
+                    <div class="math-block">
+                        $$-4x - x = -9 - 96$$
+                    </div>
+                    <div class="math-block">
+                        $$-5x = -105 \implies x = 21$$
+                    </div>
+                    <div class="math-block">
+                        $$y = -2(21) + 48 = -42 + 48 = 6$$
+                    </div>
+                    <p>Therefore, R = (21, 6)</p>
+
+                    <h4>Line TR:</h4>
+                    <p>Points: T(-4, 6) and R(21, 6)</p>
+                    <p>Since both points have the same y-coordinate, line TR is horizontal: \(y = 6\)</p>
+                    
+                    <h4>Axis of the parabola:</h4>
+                    <p>The parabola \(y^2 = 16x\) has its axis along the x-axis: \(y = 0\)</p>
+                    <p>Since TR is horizontal and the axis is horizontal, <strong>TR is parallel to the axis of the parabola</strong>.</p>
+                </div>
+
+                <div class="proof-box">
+                    <h4>Proof Summary:</h4>
+                    <p>T(-4, 6) and R(21, 6) lie on line y = 6</p>
+                    <p>Parabola axis: y = 0</p>
+                    <p>Both are horizontal lines ∴ parallel ✓</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 13: QUESTION 4 -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 04</h2>
+            </div>
+            
+            <div class="question-part">
+                <h3>Line and Parabola Intersection</h3>
+                
+                <div class="solution-box">
+                    <p><strong>Given:</strong> Line: \(x + 2y = c\) and Parabola: \(y^2 = 10x\)</p>
+
+                    <h4>Finding intersection points:</h4>
+                    <p>From the line equation: \(x = c - 2y\)</p>
+                    <p>Substitute into parabola:</p>
+                    <div class="math-block">
+                        $$y^2 = 10(c - 2y)$$
+                    </div>
+                    <div class="math-block">
+                        $$y^2 = 10c - 20y$$
+                    </div>
+                    <div class="math-block">
+                        $$y^2 + 20y - 10c = 0$$
+                    </div>
+
+                    <p>This is a quadratic in y. The intersection points exist when the discriminant ≥ 0.</p>
+                    
+                    <h4>For tangency (line touches parabola at one point):</h4>
+                    <p>Discriminant Δ = 0</p>
+                    <div class="math-block">
+                        $$\Delta = (20)^2 - 4(1)(-10c) = 400 + 40c = 0$$
+                    </div>
+                    <div class="math-block">
+                        $$40c = -400 \implies c = -10$$
+                    </div>
+                </div>
+
+                <div class="diagram-container">
+                    <img src="https://i.imgur.com/H5mKx8R.png" alt="Line tangent to parabola" class="diagram-image">
+                    <p class="diagram-caption">Figure 4.1: Line tangent to parabola \(y^2 = 10x\)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 14: QUESTION 4 CONTINUED -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 04 Cont...</h2>
+            </div>
+            
+            <div class="question-part">
+                <div class="solution-box">
+                    <h4>When c = -10:</h4>
+                    <div class="math-block">
+                        $$y^2 + 20y - 10(-10) = y^2 + 20y + 100 = 0$$
+                    </div>
+                    <div class="math-block">
+                        $$(y + 10)^2 = 0 \implies y = -10$$
+                    </div>
+                    <div class="math-block">
+                        $$x = c - 2y = -10 - 2(-10) = -10 + 20 = 10$$
+                    </div>
+
+                    <h4>Point of contact:</h4>
+                    <div class="math-block highlight">
+                        $$(10, -10)$$
+                    </div>
+
+                    <h4>Coordinates of intersection points (for general c):</h4>
+                    <p>Using quadratic formula:</p>
+                    <div class="math-block">
+                        $$y = \frac{-20 \pm \sqrt{400 + 40c}}{2} = -10 \pm \sqrt{100 + 10c}$$
+                    </div>
+                    <div class="math-block">
+                        $$x = c - 2y = c - 2(-10 \pm \sqrt{100 + 10c})$$
+                    </div>
+                    <div class="math-block">
+                        $$x = c + 20 \mp 2\sqrt{100 + 10c}$$
+                    </div>
+
+                    <h4>Therefore, intersection points are:</h4>
+                    <div class="math-block">
+                        $$(c + 20 - 2\sqrt{100 + 10c}, -10 + \sqrt{100 + 10c})$$
+                    </div>
+                    <div class="math-block">
+                        $$(c + 20 + 2\sqrt{100 + 10c}, -10 - \sqrt{100 + 10c})$$
+                    </div>
+                </div>
+
+                <div class="summary-box">
+                    <h4>Answer:</h4>
+                    <p>When \(c = -10\), the line is tangent to the parabola at point \((10, -10)\)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 15: QUESTION 5 -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 05</h2>
+            </div>
+            
+            <div class="question-part">
+                <h3>Ellipse: \(\frac{x^2}{25} + \frac{y^2}{16} = \frac{1}{2}\)</h3>
+                
+                <div class="solution-box">
+                    <p>Given equation:</p>
+                    <div class="math-block">
+                        $$\frac{x^2}{25} + \frac{y^2}{16} = \frac{1}{2}$$
+                    </div>
+
+                    <p>Multiply both sides by 2:</p>
+                    <div class="math-block">
+                        $$\frac{x^2}{50} + \frac{y^2}{32} = 1$$
+                    </div>
+
+                    <p>This is of the form \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\) where:</p>
+                    <div class="math-block">
+                        $$a^2 = 50 \implies a = \sqrt{50} = 5\sqrt{2}$$
+                    </div>
+                    <div class="math-block">
+                        $$b^2 = 32 \implies b = \sqrt{32} = 4\sqrt{2}$$
+                    </div>
+                    <p>Since \(a > b\), the major axis is along the x-axis.</p>
+
+                    <h4>a. Eccentricity</h4>
+                    <div class="math-block">
+                        $$c^2 = a^2 - b^2 = 50 - 32 = 18 \implies c = \sqrt{18} = 3\sqrt{2}$$
+                    </div>
+                    <div class="math-block">
+                        $$e = \frac{c}{a} = \frac{3\sqrt{2}}{5\sqrt{2}} = \frac{3}{5}$$
+                    </div>
+                </div>
+
+                <div class="diagram-container">
+                    <img src="https://i.imgur.com/nXQ7JvL.png" alt="Ellipse with foci" class="diagram-image">
+                    <p class="diagram-caption">Figure 5.1: Ellipse showing foci and directrices</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 16: QUESTION 5 CONTINUED -->
+        <div class="page">
+            <div class="page-header">
+                <h2>QUESTION 05 Cont...</h2>
+            </div>
+            
+            <div class="question-part">
+                <div class="solution-box">
+                    <h4>b. Equation of Directrix</h4>
+                    <p>For an ellipse, the directrices are given by \(x = \pm \frac{a}{e}\):</p>
+                    <div class="math-block">
+                        $$x = \pm \frac{5\sqrt{2}}{\frac{3}{5}} = \pm \frac{5\sqrt{2} \times 5}{3} = \pm \frac{25\sqrt{2}}{3}$$
+                    </div>
+
+                    <h4>c. The Foci</h4>
+                    <p>The foci are at \((\pm c, 0)\):</p>
+                    <div class="math-block">
+                        $$(\pm 3\sqrt{2}, 0)$$
+                    </div>
+
+                    <h4>Summary Table:</h4>
+                    <table class="result-table">
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Semi-major axis (a)</td>
+                            <td>\(5\sqrt{2}\)</td>
+                        </tr>
+                        <tr>
+                            <td>Semi-minor axis (b)</td>
+                            <td>\(4\sqrt{2}\)</td>
+                        </tr>
+                        <tr>
+                            <td>Linear eccentricity (c)</td>
+                            <td>\(3\sqrt{2}\)</td>
+                        </tr>
+                        <tr>
+                            <td>Eccentricity (e)</td>
+                            <td>\(\frac{3}{5}\)</td>
+                        </tr>
+                        <tr>
+                            <td>Foci</td>
+                            <td>\((\pm 3\sqrt{2}, 0)\)</td>
+                        </tr>
+                        <tr>
+                            <td>Directrices</td>
+                            <td>\(x = \pm \frac{25\sqrt{2}}{3}\)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
