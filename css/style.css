@@ -438,7 +438,7 @@ body {
     bottom: 1.5cm;
     right: 2cm;
     font-size: 11pt;
-    color: #777777;
+    color: #ffffff;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -496,7 +496,7 @@ body {
 /* Equation numbers - subtle */
 .eq-number {
     float: right;
-    color: #777777;
+    color: #ffffff;
     font-size: 12pt;
     margin-left: 10px;
     font-family: 'Times New Roman', Times, serif;
@@ -705,3 +705,71 @@ h2 {
     display: none;
 }
 */
+
+/* Add this to your style.css file or in a <style> tag in the head */
+
+/* Remove all page breaks */
+.page, .cover-page {
+    page-break-after: auto !important;
+    page-break-before: auto !important;
+    page-break-inside: auto !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 1cm !important; /* Adjust padding as needed */
+}
+
+/* For print media */
+@media print {
+    .page, .cover-page {
+        page-break-after: auto !important;
+        page-break-before: auto !important;
+        page-break-inside: auto !important;
+        break-after: auto !important;
+        break-before: auto !important;
+        break-inside: auto !important;
+    }
+    
+    /* Remove any forced page breaks from the print style */
+    .document-container {
+        overflow: visible !important;
+    }
+}
+
+/* Hide page numbers when printing */
+@media print {
+    /* Hide page numbers */
+    .page-number,
+    [class*="page-number"],
+    [class*="PageNumber"],
+    #page-number,
+    .pagination,
+    .page-count,
+    .page-no {
+        display: none !important;
+    }
+    
+    /* Hide equation numbers */
+    .eq-number,
+    [class*="eq-number"],
+    [class*="equation-number"],
+    .equation-number,
+    .math-block .eq-number,
+    .math-block span:last-child {
+        display: none !important;
+    }
+    
+    /* Alternative: If equation numbers are within math-block */
+    .math-block .eq-number {
+        display: none !important;
+    }
+    
+    /* If equation numbers are added via CSS counters */
+    .math-block::after {
+        content: none !important;
+    }
+    
+    /* Hide any footer elements that might contain page numbers */
+    footer, .footer, [class*="footer"] {
+        display: none !important;
+    }
+}
