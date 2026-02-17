@@ -309,7 +309,7 @@ body {
     margin: 1.5rem 0;
     font-size: 14pt;
     font-family: 'Times New Roman', Times, serif;
-    border-left: 3px solid #000000;
+    border-left: 3px solid #ffffff;
 }
 
 .solution-box {
@@ -325,8 +325,6 @@ body {
     margin: 2rem 0;
     font-size: 14pt;
     font-family: 'Times New Roman', Times, serif;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
 }
 
 .proof-box {
@@ -335,7 +333,7 @@ body {
     margin: 2rem 0;
     font-size: 14pt;
     font-family: 'Times New Roman', Times, serif;
-    border-left: 3px solid #000000;
+    border-left: 3px solid #ffffff;
 }
 
 /* Mathematical equations - NAVY BLUE for formulas */
@@ -620,3 +618,90 @@ p, li, td, th, h1, h2, h3, h4, h5, h6 {
         width: 100%;
     }
 }
+
+/* ====================================================
+   HEADER AND FOOTER REMOVAL - Add at the end of your CSS file
+   ==================================================== */
+
+/* Remove page headers */
+.page-header {
+    display: none;
+}
+
+/* Remove any other header elements */
+.university-header {
+    display: none;
+}
+
+.info-box h3, .group-box h3, .instructions-box h3 {
+    border-bottom: none;
+}
+
+/* Remove page numbers */
+.page-number {
+    display: none;
+}
+
+/* Remove any footer-like elements */
+.declaration-box {
+    border-top: none;
+}
+
+.references-box h3 {
+    border-bottom: none;
+}
+
+/* Remove any border lines that might look like headers */
+.page, .cover-page {
+    border-bottom: none;
+}
+
+/* Remove the border from page headers if any remain */
+.page-header {
+    border-bottom: none;
+}
+
+/* If you want to keep question numbers but remove decorative headers */
+.page-header h2 {
+    display: none;
+}
+
+/* Keep the question text but remove header styling */
+h2 {
+    border-bottom: none !important;
+}
+
+/* Remove any decorative lines */
+.border-bottom, .header-line, .footer-line {
+    display: none;
+}
+
+/* Remove any header/footer classes that might exist */
+.header, .footer, .main-header, .main-footer {
+    display: none;
+}
+
+/* ====================================================
+   OPTIONAL: If you want to keep just the question numbers
+   but remove all header styling, use this instead
+   ==================================================== */
+
+/* Alternative: Keep question numbers but remove styling */
+/*
+.page-header {
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+
+.page-header h2 {
+    font-size: 18pt;
+    color: #000000;
+    font-weight: bold;
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+}
+
+.page-number {
+    display: none;
+}
+*/
